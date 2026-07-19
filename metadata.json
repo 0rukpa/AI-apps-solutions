@@ -1,0 +1,6 @@
+{
+  "name": "KaLi",
+  "description": "An elegant opportunity tracking and intentional growth platform for women to reclaim their time, coordinate collaborative squad spaces, and build peer accountability.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

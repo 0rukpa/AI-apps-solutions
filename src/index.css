@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  /* Modern Editorial Aesthetic color palette custom accents */
+  --color-kali-blush: #FDF8F5;
+  --color-kali-rose-50: #FCF5F2;
+  --color-kali-rose-100: #F7E5E2;
+  --color-kali-rose-200: #F2D2CD;
+  --color-kali-rose-500: #FF5E85; /* Vibrant Bold Pink accent */
+  --color-kali-rose-600: #2D2926; /* Primary deep charcoal (replacing orange-red for editorial elegance) */
+  --color-kali-rose-700: #1C1A18; /* Hover color for primary buttons */
+  --color-kali-cream-50: #FDF8F5; /* Warm cream background */
+  --color-kali-cream-100: #F7F1EE; /* Neutral light cream background */
+  --color-kali-cream-200: #E8DED3; /* Elegant beige/cream border */
+  --color-kali-sage-50: #F4F6F5;
+  --color-kali-sage-100: #E2ECE8;
+  --color-kali-sage-500: #8DA399; /* Sage green accent */
+  --color-kali-sage-600: #5D7267;
+  --color-kali-gold-500: #C5A059; /* Gold accent */
+  --color-kali-gold-600: #9E7D3F;
+}
+
+/* Base custom designs */
+body {
+  background-color: var(--color-kali-cream-50);
+  color: #2D2926;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* UI Style Classes applied on parent container */
+
+/* 1. Editorial Cream */
+.style-cream {
+  --bg-app: var(--color-kali-cream-50);
+  --bg-card: #FFFFFF;
+  --border-card: var(--color-kali-cream-200);
+  --text-main: #2D2926;
+  --text-muted: #6B6661;
+}
+
+/* 2. Zen Forest */
+.style-sage {
+  --bg-app: #F4F6F5;
+  --bg-card: #FFFFFF;
+  --border-card: #D3E0DA;
+  --text-main: #2C3531;
+  --text-muted: #5D7267;
+}
+
+/* 3. Gilded Velvet (Luxury Dark) */
+.style-velvet {
+  --bg-app: #121110;
+  --bg-card: #1C1A18;
+  --border-card: #2D2926;
+  --text-main: #FDF8F5;
+  --text-muted: #A39E99;
+}
+
+/* 4. Atmospheric Dream (Fluid Glow) */
+.style-dream {
+  --bg-app: linear-gradient(135deg, #FFF0F5 0%, #FFB6C1 50%, #FF1493 100%);
+  --bg-card: rgba(255, 255, 255, 0.94);
+  --border-card: #FF69B4;
+  --text-main: #3C001C;
+  --text-muted: #9E1B50;
+}
+
+/* Custom CSS Variables integration classes */
+.app-container {
+  background: var(--bg-app);
+  color: var(--text-main);
+  min-height: 100vh;
+  transition: all 0.4s ease;
+}
+
+/* Bullet-journal grid background */
+.bg-grid-paper {
+  background-image: radial-gradient(var(--border-card) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Glassmorphism glass backdrop filter */
+.glass-blur {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Elegant editorial titles styling */
+.serif-title {
+  font-family: var(--font-serif);
+  color: var(--text-main);
+  letter-spacing: -0.01em;
+}
+
+/* Clean, sophisticated cards and UI elements */
+.editorial-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  box-shadow: 0 1px 3px rgba(45, 41, 38, 0.02), 0 1px 2px rgba(45, 41, 38, 0.01);
+  transition: all 0.3s ease;
+}
+
+.editorial-border {
+  border-color: var(--border-card);
+}
+
+/* Elegant custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-kali-cream-50);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-kali-cream-200);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-kali-rose-500);
+}
